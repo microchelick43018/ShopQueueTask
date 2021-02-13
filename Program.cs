@@ -17,7 +17,7 @@ namespace ShopQueueTask
         static void InputIntChecker(ref int value)
         {
             bool isCorrect = false;
-            while (true)
+            while (true)// цикл закончится, когда ввод будет верен, в ином случае будет выдаваться ошибка о вводе
             {
                 isCorrect = int.TryParse(Console.ReadLine(), out value);
                 if (!isCorrect)
@@ -26,7 +26,7 @@ namespace ShopQueueTask
                 }
                 else
                 {
-                    return;// точка выхода из цикла цикла
+                    return;// точка выхода из цикла и функции
                 }
             }
         }
